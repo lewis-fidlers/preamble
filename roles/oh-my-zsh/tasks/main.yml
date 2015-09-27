@@ -1,0 +1,10 @@
+- name: Install zsh
+  homebrew: name=zsh state=installed
+  homebrew: name=zsh-completions state=installed
+
+- name: Download and install oh-my-zsh
+  command: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+- file: src=~/.zshrc dest=~/.zshrc state=absent
+
+- file: src=~/Google\ Drive/mac\ config/.zshrc dest=~/.zshrc state=link
