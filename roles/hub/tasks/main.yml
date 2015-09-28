@@ -1,2 +1,0 @@
-- name: Installing hub
-  homebrew: name=hub state=installed

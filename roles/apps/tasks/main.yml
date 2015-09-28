@@ -1,3 +1,0 @@
-- homebrew_cask: name=alfred state=present
-- homebrew_cask: name=google-chrome state=present
-- homebrew_cask: name=firefox state=present
