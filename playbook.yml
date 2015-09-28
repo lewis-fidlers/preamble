@@ -1,8 +1,13 @@
 ---
 - hosts: all
   roles:
-    - common
-    - databases
-    - ruby
+#    - common
+   - databases
+#    - ruby
     - osx
-    - ci
+
+    - hub
+    - oh-my-zsh
+    - maximum_awesome
+    - rbenv
+    - apps

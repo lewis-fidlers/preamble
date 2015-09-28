@@ -1,0 +1,14 @@
+- file: path=~/sources state=directory
+- git: repo=git://github.com/square/maximum-awesome.git dest=~/sources/maximum-awesome
+
+- name: Install/Update maximum_awesome
+  command: chdir=~/sources/maximum-awesome rake
+
+- file: src=~/.zshrc dest=~/.vimrc.local state=absent
+- file: src=~/Google\ Drive/mac\ config/.vimrc.local dest=~/.vimrc.local state=link
+
+- file: src=~/.zshrc dest=~/.vimrc.bundles.local state=absent
+- file: src=~/Google\ Drive/mac\ config/.vimrc.bundles.local dest=~/.vimrc.bundles.local state=link
+
+- file: src=~/.vim/colors dest=~/.vim/colors state=absent
+- file: src=~/Google\ Drive/mac\ config/.vim/colors dest=~/.vim/colors state=link
